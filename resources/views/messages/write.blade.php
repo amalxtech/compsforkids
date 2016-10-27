@@ -11,21 +11,23 @@
 
         <div class="col-md-4">
 
-            <form class="form" action="/messages/submit" method="post">
+            <form class="form" action="/contact" method="post">
+
+                {{ csrf_field() }}
 
                 <div class="form-group">
                     <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" name="name">
+                    <input type="text" class="form-control" id="name" name="name" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Email address</label>
-                    <input type="email" class="form-control" id="email" name="email">
+                    <input type="email" class="form-control" id="email" name="email" required>
                 </div>
 
                 <div class="form-group">
                     <label for="email">Message</label>
-                    <textarea name="message" id="message" class="form-control" rows="5"></textarea>
+                    <textarea name="message" id="message" class="form-control" rows="5" required></textarea>
                 </div>
 
                 <button type="submit" class="btn btn-success">Send</button>

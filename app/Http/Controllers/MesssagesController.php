@@ -14,9 +14,9 @@ class MesssagesController extends Controller
         return view('messages.write');
     }
 
-    public function store(Request $request)
+    public function save(Request $request)
     {
-        return 1;
+        return $request->all();
     }
 
 }
